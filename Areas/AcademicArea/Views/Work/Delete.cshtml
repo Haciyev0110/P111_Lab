@@ -1,0 +1,33 @@
+﻿@model Work
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h3>@Html.Raw(Model.Title)</h3>
+                <p>@Html.Raw(Model.Description)</p>
+                <div class="@Model.IconField text-white" style="background-color:green;border-radius:20%;width:100px;height:100px;
+                            text-align:center;padding-top:20px;font-size:50px;"></div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <span class="text-danger">Are you want delete this?</span>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <form method="post">
+                    <input type="submit" class="btn btn-danger" value="Delete" />
+                </form>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <a asp-action="Index"><i class="fas fa-arrow-left"></i> Go back</a>
+            </div>
+        </div>
+
+    </div>
